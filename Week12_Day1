@@ -1,0 +1,80 @@
+/*
+Raining cats and dogs Activity
+create an object and set it to "dogs"
+*/
+var dogs = {
+  // creates property "raining" and sets it to true
+  raining: true,
+  // creates the property "noise" and sets it to "Woof!"
+  noise: "Woof!",
+  // creates the method "makeNoise", which when called, prints dogs.noise if raining is troubles
+  makeNoise: function() {
+    // the "this" keyword refers to the object it's called from
+    // i.e. this.raining refers to the raining property of "this" particular object
+    if (this.raining === true) {
+      return.this.noise
+    }
+  }
+};
+// creates an object with a similar layout to "dogs" and sets it to "cats"
+var cats = {
+
+}
+// the code below here is it supposed to be on a different file?
+
+const dogs = {
+  raining: true,
+  noise: "Woof!",
+  makeNoise: function () {
+    if (this.raining) {
+      return.this.noise
+    }
+  }
+
+}
+
+const cats = {
+  raining: false,
+  noise: "Meow!",
+  makeNoise: function() {
+    if (this.raining){
+      return.this.noise
+    }
+  }
+}
+
+function massHysteria(cats, dogs) {
+    if(cats.raining && dogs.raining){
+      console.log ("Message here")
+    }
+}
+
+dogs.makeNoise()
+cats.makeNoise()
+massHysteria(cats, dogs)
+
+// this has nothing to do with node, we're only using that to run the program. this is all JavaScript
+// easier way to write the code above? USING CONSTRUCTOR which has parameters and sets properlyof an
+// an object
+
+// constructor which can be used to create objects with the ".raining",".noise",
+// and ".makenoise" properties
+function Animal(raining, noise) { //this function takes a boolean and a string!
+  this.raining = raining;
+  this.noise = noise;
+  this.makeNoise = function() {
+    if(this.raining === true) {
+      console.log(this.noise);
+    }
+  };
+}
+
+// sets the variables "dogs" and "cats" to be animal objects and initializes them with...
+var dogs = new Animal(true, "Woof!");
+var cats = new Animal(false, "Meow!");
+
+// calling dogs and cats makeNoise methods
+dogs.makeNoise();
+cats.makeNoise();
+
+// if we want we can change an objects properties after they're created
