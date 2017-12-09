@@ -78,3 +78,4 @@ dogs.makeNoise();
 cats.makeNoise();
 
 // if we want we can change an objects properties after they're created
+// what defines scope in javascript? scope is function defined 
